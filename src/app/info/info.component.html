@@ -1,0 +1,52 @@
+<div class="section cc-store-home-wrap">
+  <div class="container">
+    <div class="title-pages">Minha Conta<br></div>
+    <h5 class="subtitulo-pages">Aqui você pode alterar suas informações pessoais e escolher uma nova foto de perfil.
+    </h5>
+    <div class="divider"></div>
+    <div class="info-wrap">
+      <div class="div-form-info-pessoais">
+        <h5 class="titulo-forms">Foto de Perfil</h5>
+        <div class="div-upload">
+          <div class="div-img-upload"><img src="assets/images/profile.png" loading="lazy" width="79"
+              sizes="(max-width: 479px) 100vw, 79px" srcset="assets/images/profile-p-500.png 500w, assets/images/profile.png 512w"
+              alt="" class="img-div-upload"></div>
+          <div class="div-cont-upload">
+            <h6 class="cont-upload-subtitulo">Para alterar sua foto de perfil faça aqui o envio de sua imagem.</h6>
+            <div class="html-embed input w-embed">
+              <form action="/action_page.php">
+                <label for="img">SELECIONE A IMAGEM</label>
+                <input type="file" id="imageFile" accept="image/*">
+                <input type="submit">
+              </form>
+            </div>
+          </div>
+        </div>
+        <h5 class="titulo-forms">Dados Pessoais</h5>
+        <div class="div-dados-pessoais">
+          <div class="w-form">
+            <form id="email-form" name="email-form" data-name="Email Form"><label for="name"
+                class="label-forms">nome</label><input type="text" class="w-input" maxlength="256" name="name"
+                data-name="Name" placeholder="" id="name"><label for="name" class="label-forms">ultimo
+                nome</label><input type="text" class="w-input" maxlength="256" name="name-2" data-name="Name 2"
+                placeholder="" id="name-2"><label for="email" class="label-forms">Email </label><input type="email"
+                class="w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="" id="email-2"
+                required=""><label for="email" class="label-forms">resgistro do aluno (r.a.)</label><input type="email"
+                class="w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="" id="email-2"
+                required=""><label for="email" class="label-forms">curso</label><input type="email" class="w-input"
+                maxlength="256" name="email-2" data-name="Email 2" placeholder="" id="email-2" required=""><label
+                for="email" class="label-forms">celular</label><input type="email" class="w-input" maxlength="256"
+                name="email" data-name="Email" placeholder="" id="email" required=""><input type="submit" value="Salvar"
+                data-wait="Please wait..." class="btn-forms w-button"></form>
+            <div class="w-form-done">
+              <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div class="w-form-fail">
+              <div>Oops! Something went wrong while submitting the form.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
