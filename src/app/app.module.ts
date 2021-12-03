@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
@@ -15,6 +16,11 @@ import { ReunioesComponent } from './reunioes/reunioes.component';
 
 import 'froala-editor/js/languages/pt_br.js';
 import 'froala-editor/js/plugins.pkgd.min.js';
+import { LoginComponent } from './login/login.component';
+import { SiteLayoutComponent } from './site-layout/site-layout.component';
+import { AccountService } from './services/account.service';
+import { BaseGuard } from './guard/base.guard';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -27,17 +33,28 @@ import 'froala-editor/js/plugins.pkgd.min.js';
     InfoComponent,
     MaterialComponent,
     CadernoComponent,
-    ReunioesComponent
+    ReunioesComponent,
+    LoginComponent,
+    SiteLayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     FormsModule,
+    ToastrModule.forRoot({
+      autoDismiss: true,
+      closeButton: true
+    }),
+    ReactiveFormsModule,
     FroalaEditorModule.forRoot(),
     FroalaViewModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    AccountService,
+    BaseGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

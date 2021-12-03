@@ -1,0 +1,72 @@
+<div class="div-cont-login-area">
+    <div class="cont-login w-container">
+        <div class="cont-login-area">
+            <div class="w-layout-grid grid-login">
+                <div class="div-grid1-login">
+                    <div class="div-login-area">
+                        <h1 class="h5-login-titulo">Bem Vindx,</h1>
+                        <h4 class="h4-login">Para acessar o conteúdo, entre com sua conta</h4>
+                    </div>
+                    <div class="form-login">
+                        <div class="w-form">
+                            <form name="email-form" data-name="Email Form" class="form-entrar" [formGroup]="formLogin"
+                                (submit)="submitLogin()">
+                                <div class="div-img-login">
+                                    <img src="assets/images/zoom.jpg" loading="lazy" width="138"
+                                        sizes="(max-width: 479px) 45vw, 138px"
+                                        srcset="assets/images/zoom-p-1080.jpeg 1080w, assets/images/zoom.jpg 1600w"
+                                        alt="" class="img-login">
+                                </div>
+
+                                <label for="name" class="label-forms">email</label>
+                                <input type="text" class="w-input" maxlength="256" name="name" data-name="Name"
+                                    placeholder="" id="name" formControlName="email">
+
+                                <label for="email" class="label-forms">senha</label>
+                                <input type="password" class="w-input" maxlength="256" name="email" data-name="Email"
+                                    placeholder="" id="email" required="" formControlName="password">
+
+                                <label for="email-3" class="forgot-pass">recuperar senha</label>
+                                <input type="submit" value="Entrar" class="login-btn w-button">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="div-grid2-login">
+                    <div>
+                        <h4 class="h4-nova-conta">Ainda não tem uma conta? Crie agora</h4>
+                    </div>
+                    <div class="form-login">
+                        <div class="w-form">
+                            <form name="email-form" data-name="Email Form" class="form-entrar" [formGroup]="formRegister"
+                                (submit)="submitRegister()">
+
+                                <label for="name-2" class="label-forms">nome</label>
+                                <input type="text" class="w-input" maxlength="256" name="name-2" data-name="Name 2"
+                                    placeholder="" formControlName="nome">
+
+                                <label for="name-3" class="label-forms">email</label>
+                                <input type="text" class="w-input" maxlength="256" name="name-2" data-name="Name 2"
+                                    placeholder="" formControlName="email">
+
+                                <label for="name-3" class="label-forms">tipo</label>
+                                <select type="" class="w-input" maxlength="256" name="name-2" data-name="Name 2"
+                                    placeholder="" formControlName="tipo">
+                                    <option value="1">Estudante</option>
+                                    <option value="2">Professor</option>
+                                </select>
+
+                                <label for="email-2" class="label-forms">senha</label>
+                                <input type="password" class="w-input" maxlength="256" name="email-2"
+                                    data-name="Email 2" placeholder="" formControlName="password">
+
+
+                                <input type="submit" value="Criar Conta" class="login-btn w-button">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
