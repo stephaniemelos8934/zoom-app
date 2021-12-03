@@ -1,0 +1,15 @@
+{
+  "login": {
+    "login": true,
+    "message": ""
+  },
+  "register": [
+    {
+      "nome": "João",
+      "password": "1234567",
+      "tipo": 1,
+      "email": "email@mail.com",
+      "id": 1
+    }
+  ]
+}
