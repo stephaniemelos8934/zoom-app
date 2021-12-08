@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import {filter} from 'rxjs'
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ export class AppComponent implements OnInit {
     this.router.events.pipe(
       filter((event) => event instanceof NavigationEnd)
     ).subscribe(
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       _ => {
         // @ts-ignore
         window.Webflow && window.Webflow.destroy();
@@ -27,6 +29,6 @@ export class AppComponent implements OnInit {
         window.Webflow && window.Webflow.require('ix2').init();
         document.dispatchEvent(new Event('readystatechange'));
       }
-    )
+    );
   }
 }

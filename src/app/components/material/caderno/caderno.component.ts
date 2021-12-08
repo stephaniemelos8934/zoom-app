@@ -1,18 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-caderno',
   templateUrl: './caderno.component.html',
   styleUrls: ['./caderno.component.css']
 })
-export class CadernoComponent implements OnInit {
+export class CadernoComponent {
 
-  nomeCaderno: string = 'Meu primeiro caderno'
+  nomeCaderno = 'Meu primeiro caderno';
   conteudo: string | undefined;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() { 
+    //
   }
 
 }

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -16,7 +17,7 @@ export class BaseGuard implements CanActivate {
     const isLoggedIn = this.account.isLoggedIn();
 
     if(isLoggedIn)
-      return true
+      return true;
     
     return this.router.navigate(['login']);
   }

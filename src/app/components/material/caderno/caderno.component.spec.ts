@@ -10,7 +10,7 @@ describe('CadernoComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ CadernoComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

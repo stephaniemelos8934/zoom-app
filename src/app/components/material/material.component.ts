@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -21,7 +21,7 @@ export class MaterialComponent {
       id: 2,
       nome: 'Caderno Usabilidade: Mean 3 - Angular'
     }
-  ]
+  ];
 
   novoCadernoNome: string | undefined;
   constructor(

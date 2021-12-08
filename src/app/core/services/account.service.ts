@@ -1,13 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { router } from 'json-server';
-import { filter, map, Observable, tap } from 'rxjs';
+import { filter, Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { LoginRequest } from '../core/model/login-request';
-import { LoginResponse } from '../core/model/login-response';
-import { RegisterRequest } from '../core/model/register-request';
-import { RegisterResponse } from '../core/model/register-response';
+import { LoginRequest } from '../../core/model/login-request';
+import { LoginResponse } from '../../core/model/login-response';
+import { RegisterRequest } from '../../core/model/register-request';
+import { RegisterResponse } from '../../core/model/register-response';
 
 @Injectable({
   providedIn: 'root'
@@ -32,7 +31,7 @@ export class AccountService {
   
 
   isLoggedIn(): boolean {
-    let loginInfo = JSON.parse(sessionStorage.getItem('login-info')??'{}');
+    const loginInfo = JSON.parse(sessionStorage.getItem('login-info')??'{}');
     return  Object.keys(loginInfo).indexOf('login') !== -1;
   }
 

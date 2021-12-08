@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -37,7 +37,7 @@ export class LoginComponent {
     if(!this.formRegister.valid) {
       alert(`
         Formulário com erros. Preencha todos os campos corretamente
-      `)
+      `);
     } else {
       this.accountService.register({
         nome: this.formRegister.value['nome'],
@@ -54,14 +54,15 @@ export class LoginComponent {
             }).subscribe(
               success => {
                 if(success.login ?? false) {
-                  this.toastr.success('Bem vindo!!!')
+                  this.toastr.success('Bem vindo!!!');
                   this.router.navigate(['']);
                 }
               }
             );
           }
         },
-        error => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        _ => {
           this.toastr.error('Erro ao realizar registro. Tente novamente mais tarde');
         }
       );
@@ -73,36 +74,31 @@ export class LoginComponent {
       user: this.formLogin.value['email'],
       password: this.formLogin.value['password']
     }).subscribe(
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       _ => {
         this.toastr.success('Bem vindo!!!');
         this.router.navigate(['']);
       },
-      error => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      _ => {
         this.toastr.error('Erro ao realizar login. Tente novamente mais tarde');
       }
-    )
+    );
   }
 
   private getTipo(tipo: string): 1 | 2 | 3 {
     switch(tipo) {
-      case '1':
-        return 1;
-      case '2':
-        return 2;
-      case '3':
-        return 3;
+    case '1':
+      return 1;
+    case '2':
+      return 2;
+    case '3':
+      return 3;
 
-      default:
-        return 1;
+    default:
+      return 1;
     }
   }
 
 }
 
-
-type FormularioCadastro = {
-  email: string,
-  password: string,
-  tipo: 1 | 2,
-  nome: string
-}

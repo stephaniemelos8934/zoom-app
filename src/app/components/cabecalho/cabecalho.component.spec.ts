@@ -10,7 +10,7 @@ describe('CabecalhoComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ CabecalhoComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

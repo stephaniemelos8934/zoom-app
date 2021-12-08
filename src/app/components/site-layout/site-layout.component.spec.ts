@@ -10,7 +10,7 @@ describe('SiteLayoutComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ SiteLayoutComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

@@ -10,7 +10,7 @@ describe('SalaDeAulaComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ SalaDeAulaComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
