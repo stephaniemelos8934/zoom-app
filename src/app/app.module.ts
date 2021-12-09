@@ -22,6 +22,9 @@ import { AccountService } from './core/services/account.service';
 import { BaseGuard } from './core/guard/base.guard';
 import { ToastrModule } from 'ngx-toastr';
 import { ClassesService } from './core/services/classes.service';
+import { ProfessorComponent } from './components/professor/professor.component';
+import { GruposService } from './core/services/grupos.service';
+import { ProfessorModule } from './components/professor/professor.module';
 
 
 
@@ -55,7 +58,8 @@ import { ClassesService } from './core/services/classes.service';
   providers: [
     AccountService,
     BaseGuard,
-    ClassesService
+    ClassesService,
+    GruposService
   ],
   bootstrap: [AppComponent]
 })

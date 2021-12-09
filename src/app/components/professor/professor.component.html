@@ -1,0 +1,102 @@
+<div class="section cc-store-home-wrap">
+    <div class="container">
+        <div class="title-pages">Classes<br></div>
+        <h5 class="subtitulo-pages">Aqui você pode gerênciar as suas classes, adicionar alunos e ver a lista de alunos
+            presentes em cada classe</h5>
+        <div class="divider"></div>
+        <div class="info-wrap">
+            <div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100" class="w-tabs">
+                <div class="tabs-menu-3 w-tab-menu">
+                    <a data-w-tab="Tab 1" class="tab-material w-inline-block w-tab-link w--current">
+                        <div>Classes</div>
+                    </a>
+                </div>
+                <div class="w-tab-content">
+                    <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
+                        <div class="div-content-tab-professor">
+                            <div class="cont-new-classe w-container">
+                                <div class="w-layout-grid grid-nova-classe">
+                                    <div id="w-node-_25d01cb3-ef40-e63b-5ec0-fad615c1a758-159d9d9d"
+                                        class="form-block-novo-caderno w-form">
+                                        <form id="email-form" name="email-form" data-name="Email Form"
+                                            class="form-novo-caderno" [formGroup]="criarClasseForm" (submit)="submit()">
+                                            <input type="text" class="text-nova-classe w-input" maxlength="256"
+                                                name="nome" data-name="nome" placeholder="Nome da nova classe" id="nome"
+                                                formControlName="nome">
+                                            <input type="submit" value="Adicionar"
+                                                class="btn-forms-medium w-button">
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-user-upload w-container">
+                                <ul role="list" class="list w-list-unstyled">
+                                    <li class="list-item" *ngFor="let grupo of classes">
+                                        <div class="div-caderno">
+                                            <div class="cols-caderno w-row">
+                                                <div class="col-nome-caderno w-col w-col-9">
+                                                    <div class="div-nome-caderno">
+                                                        <h6 class="title-caderno">{{grupo.name}}</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col-botoes-edit-cadernos w-col w-col-3">
+                                                    <div class="div-botoes-classes">
+                                                        <a [routerLink]="['adicionar-membros', grupo.id_grupo]" [queryParams]="{ grupo: grupo.name }" class="btn-generico btn-cadernos w-button">
+                                                            Adicionar Alunos</a>
+                                                        <a [routerLink]="['lista-alunos', grupo.id_grupo]" [queryParams]="{ grupo: grupo.name }" class="btn-generico btn-cadernos w-button">Ver
+                                                            Alunos</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- <li class="list-item">
+                                        <div class="div-caderno">
+                                            <div class="cols-caderno w-row">
+                                                <div class="col-nome-caderno w-col w-col-9">
+                                                    <div class="div-nome-caderno">
+                                                        <h6 class="title-caderno">Classe 2</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col-botoes-edit-cadernos w-col w-col-3">
+                                                    <div class="div-botoes-classes">
+                                                        <a href="#" class="btn-generico btn-cadernos w-button">
+                                                            Adicionar Alunos</a>
+                                                        <a href="#" class="btn-generico btn-cadernos w-button">Ver
+                                                            Alunos</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-item">
+                                        <div class="div-caderno">
+                                            <div class="cols-caderno w-row">
+                                                <div class="col-nome-caderno w-col w-col-9">
+                                                    <div class="div-nome-caderno">
+                                                        <h6 class="title-caderno">Classe 3</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col-botoes-edit-cadernos w-col w-col-3">
+                                                    <div class="div-botoes-classes">
+                                                        <a href="#" class="btn-generico btn-cadernos w-button">Adicionar
+                                                            Alunos</a>
+                                                        <a href="#" class="btn-generico btn-cadernos w-button">Ver
+                                                            Alunos</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+</div>

@@ -182,8 +182,7 @@ figcaption {
   padding: 12px 25px;
   border-radius: 0px;
   background-color: #1a1b1f;
-  -webkit-transition: background-color 400ms ease, opacity 400ms ease,
-    color 400ms ease;
+  -webkit-transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
   transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
   color: #fff;
   font-size: 12px;
@@ -1393,6 +1392,114 @@ figcaption {
   text-decoration: none;
 }
 
+.div-botoes-classes {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.div-content-tab-professor {
+  padding: 40px 0px;
+}
+
+.text-nova-classe {
+  display: inline-block;
+  width: 80%;
+  margin-right: 20px;
+  margin-bottom: 0px;
+}
+
+.cont-new-classe {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+  padding: 30px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(184, 161, 255, 0.14);
+}
+
+.grid-nova-classe {
+  display: block;
+  padding-top: 15px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  justify-items: stretch;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  grid-auto-columns: 1fr;
+  -ms-grid-columns: 1fr 10.75fr;
+  grid-template-columns: 1fr 10.75fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+
+.classe-table-container {
+  position: static;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 60px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-columns: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+}
+
 @media screen and (max-width: 991px) {
   .section.cc-cta {
     padding-right: 0px;
@@ -1437,10 +1544,8 @@ figcaption {
 
   .navigation-item {
     padding: 15px 30px;
-    -webkit-transition: background-color 400ms ease, opacity 400ms ease,
-      color 400ms ease;
-    transition: background-color 400ms ease, opacity 400ms ease,
-      color 400ms ease;
+    -webkit-transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
+    transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
     color: #6f45ee;
     font-weight: 600;
     text-align: center;
@@ -1475,8 +1580,7 @@ figcaption {
   .home-grid {
     justify-items: center;
     grid-row-gap: 50px;
-    grid-template-areas:
-      "."
+    grid-template-areas: "."
       ".";
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -1584,6 +1688,34 @@ figcaption {
 
   .titulo-card-menu {
     text-align: left;
+  }
+
+  .div-content-tab-professor {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .text-nova-classe {
+    width: 70%;
+  }
+
+  .cont-new-classe {
+    padding-right: 30px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .grid-nova-classe {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
 }
 
@@ -1823,6 +1955,21 @@ figcaption {
   .col-img-user-upload {
     margin-bottom: 10px;
   }
+
+  .text-nova-classe {
+    width: 58%;
+  }
+
+  .cont-new-classe {
+    padding-right: 30px;
+    background-color: rgba(64, 0, 255, 0.23);
+  }
+
+  .grid-nova-classe {
+    justify-items: center;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -1906,8 +2053,7 @@ figcaption {
     padding-top: 0px;
     border-style: solid none none;
     border-width: 1px;
-    border-color: rgba(68, 42, 146, 0.26) rgba(68, 42, 146, 0.44)
-      rgba(68, 42, 146, 0.44);
+    border-color: rgba(68, 42, 146, 0.26) rgba(68, 42, 146, 0.44) rgba(68, 42, 146, 0.44);
   }
 
   .home-grid {
@@ -2331,6 +2477,39 @@ figcaption {
     line-height: 16px;
     text-align: left;
   }
+
+  .div-botoes-classes {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .div-content-tab-professor {
+    padding: 20px 0px;
+  }
+
+  .text-nova-classe {
+    width: 90%;
+  }
+
+  .cont-new-classe {
+    margin-bottom: 20px;
+    padding: 15px 10px;
+    background-color: rgba(64, 0, 255, 0.23);
+  }
+
+  .grid-nova-classe {
+    -ms-grid-columns: 10.75fr;
+    grid-template-columns: 10.75fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+  }
 }
 
 #w-node-_86e64837-0616-515b-4568-76c147234d34-64275ac0 {
@@ -2475,6 +2654,15 @@ figcaption {
 }
 
 #w-node-_25d01cb3-ef40-e63b-5ec0-fad615c1a758-374eff4b {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -ms-grid-column-align: auto;
+  justify-self: auto;
+}
+
+#w-node-_25d01cb3-ef40-e63b-5ec0-fad615c1a758-159d9d9d {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;

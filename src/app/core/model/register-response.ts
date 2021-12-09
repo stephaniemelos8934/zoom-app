@@ -1,4 +1,4 @@
 export type RegisterResponse = {
-    response: boolean,
+    login: boolean,
     message: string
 }

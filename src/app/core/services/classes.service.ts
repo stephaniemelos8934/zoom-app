@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { error } from 'console';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { ClasseResponse } from '../model/classe-response';
@@ -26,6 +25,6 @@ export class ClassesService {
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   getAllClasses(idProf: string) {
-    throw error('not implemented method exception');
+    //
   }
 }

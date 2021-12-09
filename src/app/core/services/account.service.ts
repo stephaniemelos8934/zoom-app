@@ -21,7 +21,7 @@ export class AccountService {
   login(data: LoginRequest): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(`${environment.backend}/login`, data).pipe(
       filter(response => response.login ?? false),
-      tap(response => sessionStorage.setItem('login-info', JSON.stringify(response)))
+      tap(response => sessionStorage.setItem('login-info', JSON.stringify({...response, email: data.email})))
     );
   }
 
@@ -39,5 +39,9 @@ export class AccountService {
   logout(): void {
     sessionStorage.removeItem('login-info');
     this.router.navigate(['login']);
+  }
+
+  getUserEmail(): string {
+    return JSON.parse(sessionStorage.getItem('login-info') ?? '')['email'] ?? '';
   }
 }

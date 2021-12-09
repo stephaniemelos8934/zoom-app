@@ -46,11 +46,11 @@ export class LoginComponent {
         email: this.formRegister.value['email']
       }).subscribe(
         success => {
-          if(success.response) {
+          if(success.login) {
 
             this.accountService.login({
               password: this.formRegister.value['password'],
-              user: this.formRegister.value['email']
+              email: this.formRegister.value['email']
             }).subscribe(
               success => {
                 if(success.login ?? false) {
@@ -71,7 +71,7 @@ export class LoginComponent {
 
   submitLogin(): void {
     this.accountService.login({
-      user: this.formLogin.value['email'],
+      email: this.formLogin.value['email'],
       password: this.formLogin.value['password']
     }).subscribe(
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
