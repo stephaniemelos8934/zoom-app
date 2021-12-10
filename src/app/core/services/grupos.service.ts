@@ -13,11 +13,12 @@ import { AccountService } from './account.service';
 export class GruposService {
   constructor(private http: HttpClient, private account: AccountService) {}
 
-  listarMembrosGrupo(nomeGrupo: string, idGrupo: string): Observable<MembrosGruposResponse | unknown> {
-    return this.http.post<MembrosGruposResponse | unknown>(environment.backend + '/listgroupmemebers', {
+  listarMembrosGrupo(nomeGrupo: string, idGrupo: string): Observable<any> {
+    return this.http.post<any>(environment.backend + '/listgroupmemebers', {
       name: nomeGrupo,
       group_id: idGrupo
     });
+    
   }
 
   criarGrupo(nomeGrupo: string): Observable<{ response: string } | ErrorResponse> {
@@ -35,7 +36,10 @@ export class GruposService {
     );
   }
 
-  adicionarMembro(grupoId: string, emails: string[]): Observable<{response: string} | ErrorResponse> {
-    return this.http.post<{response: string} | ErrorResponse>(environment.backend + `/addmember/${grupoId}`, emails);
+  adicionarMembro(grupoId: string, email: string): Observable<{response: string} | ErrorResponse> {
+    return this.http.post<{response: string} | ErrorResponse>(environment.backend + '/addgroupmember', {
+      group_id: grupoId,
+      email
+    });
   }
 }

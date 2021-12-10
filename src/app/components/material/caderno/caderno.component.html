@@ -1,6 +1,10 @@
 <div class="section cc-store-home-wrap">
   <div class="container">
     <div class="title-pages">Meu Caderno<br></div>
+    <button
+      class="btn-generico btn-cadernos w-button" (click)="atualizar()"
+      >Alterar</button
+    >
     <h5 class="subtitulo-pages">{{nomeCaderno}}</h5>
     <div [froalaEditor] [(froalaModel)]="conteudo"></div>
   </div>

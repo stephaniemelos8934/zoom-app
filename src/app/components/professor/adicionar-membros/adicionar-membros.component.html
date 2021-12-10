@@ -3,9 +3,9 @@
         <div id="w-node-_25d01cb3-ef40-e63b-5ec0-fad615c1a758-159d9d9d"
             class="form-block-novo-caderno w-form">
             <form id="email-form" name="email-form" data-name="Email Form"
-                class="form-novo-caderno">
+                class="form-novo-caderno" (submit)="submit()">
                 <input type="text" class="text-nova-classe w-input" maxlength="256"
-                    name="emails" data-name="nome" placeholder="Email dos alunos. Separe por vírgulas" id="emails">
+                    name="emails" data-name="nome" placeholder="Email do novo membro" id="emails" [(ngModel)]="emailNovoMembro">
                 <input type="submit" value="Adicionar"
                     class="btn-forms-medium w-button">
                 <button class="btn-forms-medium w-button" (click)="cancelar()">Cancelar</button>

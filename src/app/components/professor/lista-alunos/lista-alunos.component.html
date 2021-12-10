@@ -1,34 +1,21 @@
 <div class="cont-new-classe w-container">
     <div class="w-layout-grid grid-nova-classe">
-        <div id="w-node-_25d01cb3-ef40-e63b-5ec0-fad615c1a758-159d9d9d"
-            class="form-block-novo-caderno w-form">
+        <div id="w-node-_25d01cb3-ef40-e63b-5ec0-fad615c1a758-159d9d9d" class="form-block-novo-caderno w-form">
             <table>
                 <thead>
                     <tr>
-                        <th>RA</th>
+
                         <th>Nome</th>
                         <th>Sobrenome</th>
                         <th>Faltas</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>123</td>
-                        <td>Fulano</td>
-                        <td>da silva</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>456</td>
-                        <td>Fulano</td>
-                        <td>Ciclano</td>
+                    <tr *ngFor="let membro of membros">
+
+                        <td>{{membro.first_name}}</td>
+                        <td>{{membro.last_name}}</td>
                         <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>789</td>
-                        <td>Ciclano</td>
-                        <td>de fulano</td>
-                        <td>15</td>
                     </tr>
                 </tbody>
             </table>

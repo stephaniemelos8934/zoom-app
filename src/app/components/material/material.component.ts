@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MaterialService } from 'src/app/core/services/material.service';
 
 @Component({
   selector: 'app-material',
   templateUrl: './material.component.html',
   styleUrls: ['./material.component.css']
 })
-export class MaterialComponent {
+export class MaterialComponent implements OnInit {
 
   cadernoMock = [
     {
@@ -25,18 +26,42 @@ export class MaterialComponent {
 
   novoCadernoNome: string | undefined;
   constructor(
-    private router: Router
+    private router: Router,
+    private material: MaterialService
   ) { }
 
+  ngOnInit(): void {
+    this.material.listarCaderno().subscribe(
+      success => {
+        this.cadernoMock = success;
+      }
+    );
+  }
 
+  listarCadernos(): void {
+    this.material.listarCaderno().subscribe(
+      success => {
+        this.cadernoMock = success;
+      }
+    );
+  }
 
   novoCaderno(): void {
-    this.cadernoMock.push({
-      nome: this.novoCadernoNome ?? '',
-      id: this.cadernoMock[this.cadernoMock.length - 1].id + 1
-    });
+    this.material.criarCaderno(this.novoCadernoNome ?? 'Novo Caderno', 'Hello').subscribe(
+      _ => {
+        this.novoCadernoNome = undefined;
+        this.listarCadernos();
+      }
+    );
 
-    this.novoCadernoNome = undefined;
+  }
+
+  excluirCaderno(id: number) {
+    this.material.excluirCaderno(id).subscribe(
+      _ => {
+        this.listarCadernos();
+      }
+    );
   }
 
   editarCaderno(id: number) {

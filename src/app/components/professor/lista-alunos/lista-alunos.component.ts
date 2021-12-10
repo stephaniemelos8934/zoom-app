@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
+import { MembrosGruposResponse } from 'src/app/core/model/membros-grupo-response';
 import { GruposService } from 'src/app/core/services/grupos.service';
 
 @Component({
@@ -11,6 +12,7 @@ export class ListaAlunosComponent implements OnInit {
 
   classeId = '';
   nomeGrupo = '';
+  membros: any;
 
   constructor(
     private routeSnapshot: ActivatedRoute,
@@ -24,7 +26,8 @@ export class ListaAlunosComponent implements OnInit {
 
     this.gruposService.listarMembrosGrupo(this.nomeGrupo, this.classeId).subscribe(
       success => {
-        console.log(success);
+        this.membros = success.response.members;
+        console.log(this.membros.response.members);
       }
     );
   }

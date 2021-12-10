@@ -5,7 +5,6 @@ import { InfoComponent } from './components/info/info.component';
 import { LoginComponent } from './components/login/login.component';
 import { CadernoComponent } from './components/material/caderno/caderno.component';
 import { MaterialComponent } from './components/material/material.component';
-import { ProfessorComponent } from './components/professor/professor.component';
 import { ReunioesComponent } from './components/reunioes/reunioes.component';
 import { SiteLayoutComponent } from './components/site-layout/site-layout.component';
 import { BaseGuard } from './core/guard/base.guard';
@@ -21,7 +20,7 @@ const routes: Routes = [
       { path: 'reunioes', component: ReunioesComponent },
       { path: 'material', component: MaterialComponent },
       { path: 'material/caderno/:id', component: CadernoComponent },
-      { path: 'professor', loadChildren: () => import('./components/professor/professor.module').then(m => m.ProfessorModule) }
+      { path: 'grupos', loadChildren: () => import('./components/professor/professor.module').then(m => m.ProfessorModule) }
     ],
   },
   { path: 'login', component: LoginComponent },

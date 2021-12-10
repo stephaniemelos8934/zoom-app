@@ -75,21 +75,13 @@
                         class="btn-forms-medium w-button"
                       />
                     </form>
-                    <div class="w-form-done">
-                      <div>Thank you! Your submission has been received!</div>
-                    </div>
-                    <div class="w-form-fail">
-                      <div>
-                        Oops! Something went wrong while submitting the form.
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
               <div class="content-user-upload w-container">
                 <ul role="list" class="list w-list-unstyled">
                   <li class="list-item" *ngFor="let caderno of cadernoMock">
-                    <div class="div-caderno" (click)="editarCaderno(caderno.id)">
+                    <div class="div-caderno">
                       <div class="cols-caderno w-row">
                         <div class="col-nome-caderno w-col w-col-9">
                           <div class="div-nome-caderno">
@@ -101,15 +93,15 @@
                         <div class="col-botoes-edit-cadernos w-col w-col-3">
                           <div class="div-botoes-cadernos">
                             <a
-                              href="#"
                               class="btn-generico btn-cadernos w-button"
+                              (click)="excluirCaderno(caderno.id)"
                             >
                               Remover
                             </a>
                             <a
-                              href="#"
+                              (click)="editarCaderno(caderno.id)"
                               class="btn-generico btn-cadernos w-button"
-                              >Renomear</a
+                              >Alterar</a
                             >
                           </div>
                         </div>
